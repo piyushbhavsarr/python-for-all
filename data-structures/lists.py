@@ -48,3 +48,9 @@ print(f"Index of 'banana' starting from index 2: {index_starting_from_2}")
 # Find the index of 'banana' between index 2 (inclusive) and 4 (exclusive)
 index_within_range = my_list.index('banana', 0, 4)
 print(f"Index of 'banana' within the range [2, 4): {index_within_range}")
+
+#list.clear()
+second_list.clear()
+
+#list.count(x)
+my_list.count('banana')
