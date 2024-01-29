@@ -1,0 +1,1 @@
+sentence = "This is a single line string. This is how it is used in Python. Double quotes are used to enclose it"
