@@ -100,3 +100,42 @@ print("list a is : ",list_a)
 list_a.sort()
 print(list_a)
 #ERROR '<' not supported between instances of 'str' and 'int'
+
+#Explore more (custom sort)
+#list.sort(key=None,reverse=False)
+print("Custom Sorting Lists")
+
+def custom_sort(string):
+    return len(string)
+
+list_b = ['apple','banana','apple','watermelon','laptop','ubuntu']
+list_b.sort(key = custom_sort)
+print(list_b)
+
+#if the lists is numeric:
+def custom_sort(string):
+    return len(str(string))
+
+list_b = [1,2,3,4,5,3,344,443]
+list_b.sort(key = custom_sort)
+print(list_b)
+
+#Sorting with lambda function:
+list_b = ['python','java','javascript','nodejs','reactjs','angular']
+
+# Sort the list based on the last character of each word
+
+list_b.sort(key = lambda x:x[-1])   
+print(list_b) #['java', 'python', 'angular', 'nodejs', 'reactjs', 'javascript']
+
+#list.reverse
+
+list_b.reverse()
+print("reversed ",list_b)
+
+#list.copy() - it is a shallow copy.
+copied_list = list_b.copy()
+print("copied new list ", copied_list)
+
+
+
