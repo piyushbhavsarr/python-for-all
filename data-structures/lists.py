@@ -47,10 +47,95 @@ print(f"Index of 'banana' starting from index 2: {index_starting_from_2}")
 
 # Find the index of 'banana' between index 2 (inclusive) and 4 (exclusive)
 index_within_range = my_list.index('banana', 0, 4)
-print(f"Index of 'banana' within the range [2, 4): {index_within_range}")
+print(f"Index of 'banana' within the range 2 (inclusive) and 4 (exclusive) : {index_within_range}")
 
 #list.clear()
 second_list.clear()
 
 #list.count(x)
 my_list.count('banana')
+
+my_list = ['apple', 'banana', 'orange', 'banana', 'grape']
+
+# Using list comprehension to find indexes of 'banana'
+banana_indexes = [index for index, value in enumerate(my_list) if value == 'banana']
+
+print(f"Indexes of 'banana': {banana_indexes}")
+
+#sorting
+
+#simple sorting -numbers
+list_a = [1,3,2,9,6,1,5,4,1,10,15,54,69,45]
+print(f"list a is : {list_a}")
+list_a.sort()
+print(list_a)
+#list a is :  [1, 3, 2, 9, 6, 1, 5, 4, 1, 10, 15, 54, 69, 45]
+#[69, 54, 45, 15, 10, 9, 6, 5, 4, 3, 2, 1, 1, 1]
+
+
+
+#Using words - alphabets.
+list_a = ['zip','z','ball','python','apple','boat','table','t','a']
+print("list a is : ",list_a)
+list_a.sort()
+print(list_a)
+# list a is :  ['zip', 'z', 'ball', 'python', 'apple', 'boat', 'table', 't', 'a']
+# ['a', 'apple', 'ball', 'boat', 'python', 't', 'table', 'z', 'zip']
+
+
+
+#testing on both alphabets and number - i.e. alphanumeric lists with string format
+list_a = ['a','1','A','0123','0','01','0a']
+print("list a is : ",list_a)
+list_a.sort()
+print(list_a)
+
+# list a is :  ['zip', 'z', 'ball', 'python', 'apple', 'boat', 'table', 't', 'a']
+# ['a', 'apple', 'ball', 'boat', 'python', 't', 'table', 'z', 'zip']
+
+
+#testing on both alphabets and number - i.e. alphanumeric lists with mixed format
+#list_a = [2, '2']
+print("list a is : ",list_a)
+list_a.sort()
+print(list_a)
+#ERROR '<' not supported between instances of 'str' and 'int'
+
+#Explore more (custom sort)
+#list.sort(key=None,reverse=False)
+print("Custom Sorting Lists")
+
+def custom_sort(string):
+    return len(string)
+
+list_b = ['apple','banana','apple','watermelon','laptop','ubuntu']
+list_b.sort(key = custom_sort)
+print(list_b)
+
+#if the lists is numeric:
+def custom_sort(string):
+    return len(str(string))
+
+list_b = [1,2,3,4,5,3,344,443]
+list_b.sort(key = custom_sort)
+print(list_b)
+
+#Sorting with lambda function:
+list_b = ['python','java','javascript','nodejs','reactjs','angular']
+
+# Sort the list based on the last character of each word
+
+list_b.sort(key = lambda x:x[-1])   
+print(list_b) #['java', 'python', 'angular', 'nodejs', 'reactjs', 'javascript']
+
+#list.reverse
+
+list_b.reverse()
+print("reversed ",list_b)
+
+#list.copy() - it is a shallow copy.
+copied_list = list_b.copy()
+print("copied new list ", copied_list)
+
+
+
